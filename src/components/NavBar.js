@@ -8,7 +8,7 @@ const NavBar = (props) => {
     <div>
       <nav className={`navbar fixed-top navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Geo News</Link>
+          <Link className="navbar-brand" to="/">News</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -34,10 +34,13 @@ const NavBar = (props) => {
            */}
 
           <div  onClick={props.toggleMode} >
+            
             <span  className={`cursor-pointer ${props.mode === 'light' ? "d-none" : "flex" } text-light`}>
-              <MoonStarsFill size={30}></MoonStarsFill></span>
+              <BrightnessHigh className='cusor-pointer'  size={30}></BrightnessHigh></span>
+            
             <span  className={`cursor-pointer ${props.mode === 'light' ? "flex" : "d-none"  }`}>
-            <BrightnessHigh className='cusor-pointer'  size={30}></BrightnessHigh></span>
+              <MoonStarsFill size={30}></MoonStarsFill>
+            </span>
           </div>
           <divn />
         </div>
